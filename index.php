@@ -1,17 +1,6 @@
 <?php
 session_start();
-
-$url = $_SERVER['REQUEST_URI']; //returns the current URL
-$parts = explode('/',$url);
-$dir = $_SERVER['SERVER_NAME'];
-for ($i = 0; $i < count($parts) - 1; $i++) {
- $dir .= $parts[$i] . "/";
-}
-echo $dir;
-
-echo "<br>";
-
-require_once $dir . '/vendor/autoload.php'; // change path as needed
+require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
   'app_id' => '229194961285252',
@@ -20,17 +9,13 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-echo "<br>";
 
-
-echo "<br>";
-
-echo $fb;
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
 $url = $helper->getLoginUrl('https://api-messager.herokuapp.com/next.php', $permissions);
+
+echo $url ;
 
 ?>
 <!doctype html>
