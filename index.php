@@ -2,7 +2,9 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
-echo "require_once __DIR__ . '/vendor/autoload.php'";
+$path_dir => require_once __DIR__ . '/vendor/autoload.php';
+
+echo "$path_dir";
 
 
 $fb = new \Facebook\Facebook([
