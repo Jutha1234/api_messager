@@ -3,27 +3,21 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
-  'app_id' => '2183115115305945',
+  'app_id' => '1905822206393763',
   'app_secret' => '0e5c2f9fd1626689fb67a5df4dead4e2',
   'default_graph_version' => 'v3.1',
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-print "$fb";
+$fb->setDefaultAccessToken('EAADQc5xAcIQBACrblsmqo6pio1etqvYhFWenxDH2uIiQpQXgwSgJZBMCU4ZCbAI1QOWW9fFy3b6byXYV07VS5lurRxlihvvZBB6rfvyX2YhPDa4sKwGEZAWEUEqqZBO7wHq7RaOugwTrXnZAiEpQKXKiBKffwwNYOpHixtmyZC6MqOiqbfX2WLGRrsucffzvqMZD');
 
-$helper = $fb->getRedirectLoginHelper();
-if (isset($_GET['state'])) {
-  $helper->getPersistentDataHandler()->set('state', $_GET['state']);
-}
-$access_token = $helper->getAccessToken();
-$_SESSION['access_token'] = $access_token; // save to session
-
-print "\n acces token $access_token";
+$a_post = array(
+    'message' => "My test post"
+);
 
 try {
-  // Get the \Facebook\GraphNodes\GraphUser object for the current user.
-  // If you provided a 'default_access_token', the '{access-token}' is optional.
-  $response = $fb->get('/me', $access_token);
+  $response = $fb->get('/me');
+  //$response = $fb->post('/me/feed', $a_post); // post to page
 } catch(Exception $e) {
   // When validation fails or other local issues
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
@@ -32,6 +26,7 @@ try {
 
 $me = $response->getDecodedBody();
 echo 'Logged in as ' . $me['name'].'<br>';
+var_dump($me);
 
 ?>
 <!doctype html>
@@ -40,8 +35,6 @@ echo 'Logged in as ' . $me['name'].'<br>';
     <title>php-sdk</title>
   </head>
   <body>
-    <div>
-      <img src="https://graph.facebook.com/me/picture?access_token=<?=strval($access_token)?>">
-    </div>
+    
   </body>
 </html>
