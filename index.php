@@ -9,7 +9,7 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-echo $fb;
+echo "start ...........";
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
