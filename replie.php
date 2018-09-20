@@ -9,7 +9,7 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-$fb->setDefaultAccessToken('EAADQc5xAcIQBACrblsmqo6pio1etqvYhFWenxDH2uIiQpQXgwSgJZBMCU4ZCbAI1QOWW9fFy3b6byXYV07VS5lurRxlihvvZBB6rfvyX2YhPDa4sKwGEZAWEUEqqZBO7wHq7RaOugwTrXnZAiEpQKXKiBKffwwNYOpHixtmyZC6MqOiqbfX2WLGRrsucffzvqMZD');
+$fb->setDefaultAccessToken('EAADQc5xAcIQBACkCJl3fk6IB53nLdPRZAwnleVP7ijgdS8gvB90lCBNN9qxYlNGckqhsukZAKgQYLSNh2HXt6ydhjKqdGoTZA5xHVTyBj5U65RwEC6TGT71vNZBuZAvDUv2o2PIBRV4ZAucyIeBmRRyZCES9AD6K8mdzJmkmwxVPAZDZD');
 
 $a_post = array(
 'message' => "my test post 2"
