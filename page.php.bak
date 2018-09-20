@@ -3,13 +3,13 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
-  'app_id' => '1905822206393763',
-  'app_secret' => '0e5c2f9fd1626689fb67a5df4dead4e2',
+  'app_id' => '{your-app-id}',
+  'app_secret' => '{your-secret}',
   'default_graph_version' => 'v3.1',
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-$fb->setDefaultAccessToken('EAADQc5xAcIQBACrblsmqo6pio1etqvYhFWenxDH2uIiQpQXgwSgJZBMCU4ZCbAI1QOWW9fFy3b6byXYV07VS5lurRxlihvvZBB6rfvyX2YhPDa4sKwGEZAWEUEqqZBO7wHq7RaOugwTrXnZAiEpQKXKiBKffwwNYOpHixtmyZC6MqOiqbfX2WLGRrsucffzvqMZD');
+$fb->setDefaultAccessToken('{your-page-access-token}');
 
 $a_post = array(
     'message' => "My test post"
