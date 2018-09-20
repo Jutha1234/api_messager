@@ -2,6 +2,9 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
+echo "require_once __DIR__ . '/vendor/autoload.php'";
+
+
 $fb = new \Facebook\Facebook([
   'app_id' => '2183115115305945',
   'app_secret' => '63cb89126f2bf4c20a3b55364920912e',
@@ -14,7 +17,6 @@ echo "start ...........";
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
 $url = $helper->getLoginUrl('https://api-messager.herokuapp.com/next.php', $permissions);
-echo "permission  $permissions";
 ?>
 <!doctype html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
