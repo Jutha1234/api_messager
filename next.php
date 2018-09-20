@@ -9,17 +9,12 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-print "index.php";
-
 $helper = $fb->getRedirectLoginHelper();
 if (isset($_GET['state'])) {
   $helper->getPersistentDataHandler()->set('state', $_GET['state']);
 }
 $access_token = $helper->getAccessToken();
-
 $_SESSION['access_token'] = $access_token; // save to session
-
-print "\n acces token $access_token";
 
 try {
   // Get the \Facebook\GraphNodes\GraphUser object for the current user.

@@ -3,21 +3,26 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
-  'app_id' => '2183115115305945',
-  'app_secret' => '63cb89126f2bf4c20a3b55364920912e',
+  'app_id' => '{your-app-id}',
+  'app_secret' => '{your-secret-id}',
   'default_graph_version' => 'v3.1',
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-$fb->setDefaultAccessToken('EAADQc5xAcIQBACkCJl3fk6IB53nLdPRZAwnleVP7ijgdS8gvB90lCBNN9qxYlNGckqhsukZAKgQYLSNh2HXt6ydhjKqdGoTZA5xHVTyBj5U65RwEC6TGT71vNZBuZAvDUv2o2PIBRV4ZAucyIeBmRRyZCES9AD6K8mdzJmkmwxVPAZDZD');
+$fb->setDefaultAccessToken('{your-page-access-token}');
 
 $a_post = array(
     'message' => "My test post"
 );
+$a_post_photo = array(
+  'caption' => 'Test upload photo2',
+  'url' => 'https://codekit.co/img/logo.png'
+);
 
 try {
-  $response = $fb->get('/me');
+  //$response = $fb->get('/218056112203420_218064452202586/comments');
   //$response = $fb->post('/me/feed', $a_post); // post to page
+  $response = $fb->post('/me/photos',$a_post_photo);
 } catch(Exception $e) {
   // When validation fails or other local issues
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
@@ -25,7 +30,6 @@ try {
 }
 
 $me = $response->getDecodedBody();
-echo 'Logged in as ' . $me['name'].'<br>';
 var_dump($me);
 
 ?>
