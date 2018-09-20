@@ -4,18 +4,19 @@ require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
   'app_id' => '2183115115305945',
-  'app_secret' => '0e5c2f9fd1626689fb67a5df4dead4e2',
+  'app_secret' => '63cb89126f2bf4c20a3b55364920912e',
   'default_graph_version' => 'v3.1',
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-print "$fb";
+print "index.php";
 
 $helper = $fb->getRedirectLoginHelper();
 if (isset($_GET['state'])) {
   $helper->getPersistentDataHandler()->set('state', $_GET['state']);
 }
 $access_token = $helper->getAccessToken();
+
 $_SESSION['access_token'] = $access_token; // save to session
 
 print "\n acces token $access_token";
