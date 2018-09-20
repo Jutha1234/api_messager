@@ -9,7 +9,7 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
-echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+echo '\r\nhttp://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
 $url = $_SERVER['REQUEST_URI']; //returns the current URL
 $parts = explode('/',$url);
@@ -19,9 +19,9 @@ for ($i = 0; $i < count($parts) - 1; $i++) {
 }
 echo $dir;
 
-echo "------------";
+echo "\r\n------------";
 
-echo $fb;
+echo '\r\n'.$fb;
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
