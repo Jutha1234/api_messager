@@ -1,5 +1,5 @@
 <?php
 return [
-    'verify_token' => '1234qwerasdf',
-    'token' => 'EAAfBiBjzm9kBAAE2GO00O3rnuwn1BNSRvZBLpkv45qmrObnZB8xdsYhzIdMXGmZANtV9xh4eCJ156debusktS20e5v3ry07ysRmiDExBVyjZAdxlD4rOwBEEkeJcvFTZCavLUZCZBXcP4BZAsZAm0eIDaO0EH4BdyIie09ZBlnqFMlZCwZDZD'
+    'verify_token' => '123214qwerasdf',
+    'token' => 'EAAfBiBjzm9kBAOw4A4L18GAFv3ZAaSV5nwtwZBQzhXBT30FKzLn2a0JVqUi7F6DTzuLItZBL97zIHyR9JD2ZBNZCchUf61yrovuLyJkhBxPPvK3VLOoKKXcK6IwZBgHwAvfnAvM9eZAwZC6bkZAWlvaJX49gYZChrDvSEacqm68cKIQQZDZD'
 ];
