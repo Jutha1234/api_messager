@@ -9,6 +9,7 @@ if (file_exists(__DIR__ . '/config.php')) {
     $config = include __DIR__ . '/config.php';
     $verify_token = $config['verify_token'];
     $token = $config['token'];
+	echo $token;
 }
 require_once(dirname(__FILE__) . '/vendor/autoload.php');
 use pimax\FbBotApp;
