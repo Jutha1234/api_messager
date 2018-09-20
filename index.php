@@ -11,7 +11,7 @@ $fb = new \Facebook\Facebook([
 
 echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-echo $fb;
+echo __DIR__ . '/vendor/autoload.php';
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
