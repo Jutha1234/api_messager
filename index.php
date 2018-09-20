@@ -9,6 +9,10 @@ $fb = new \Facebook\Facebook([
   //'default_access_token' => '{access-token}', // optional
 ]);
 
+echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+echo $fb;
+
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
 $url = $helper->getLoginUrl('https://api-messager.herokuapp.com/next.php', $permissions);
