@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
+require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php'; // change path as needed
 
 $fb = new \Facebook\Facebook([
   'app_id' => '229194961285252',
@@ -18,6 +18,10 @@ for ($i = 0; $i < count($parts) - 1; $i++) {
  $dir .= $parts[$i] . "/";
 }
 echo $dir;
+
+echo "------------";
+
+echo $fb;
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
