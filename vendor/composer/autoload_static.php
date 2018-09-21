@@ -11,10 +11,6 @@ class ComposerStaticInit642ddc210ecc5a6bb70463914df0a11f
     );
 
     public static $prefixLengthsPsr4 = array (
-        'p' => 
-        array (
-            'pimax\\' => 6,
-        ),
         'F' => 
         array (
             'Facebook\\' => 9,
@@ -22,10 +18,6 @@ class ComposerStaticInit642ddc210ecc5a6bb70463914df0a11f
     );
 
     public static $prefixDirsPsr4 = array (
-        'pimax\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pimax/fb-messenger-php',
-        ),
         'Facebook\\' => 
         array (
             0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
