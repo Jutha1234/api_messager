@@ -6,8 +6,7 @@ require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 //require_once __DIR__ . '/Facebook/autoload.php';
 //echo __DIR__;
 //use Facebook\FacebookRequest;
-$apptest = require_once __DIR__ . '/vendor/autoload.php';
-echo $apptest;
+
 
 $app_id = {{your app-id}};
 $app_secret = {{your app-secret}};
