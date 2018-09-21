@@ -21,7 +21,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6|^7.0"
+                "php": "^5.6.0|^7.0.0"
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "~5.0",
