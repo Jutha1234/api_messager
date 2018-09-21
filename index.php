@@ -15,6 +15,7 @@ $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // Optional permissions
 $url = $helper->getLoginUrl('https://api-messager.herokuapp.com/next.php', $permissions);
 
+echo $helper;
 echo $url ;
 
 ?>
